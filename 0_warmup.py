@@ -1,7 +1,18 @@
 import random
 
+# this was my guess at the challenge
 number_in_my_head = random.randint(1, 100)
-print("The number is:", number_in_my_head)
+guess = eval(input("Guess the value of the number in my head: "))
+
+for i in range(5):
+  if number_in_my_head == guess:
+    print("YOU WON THE GAME!!!")
+  elif number_in_my_head > guess:
+    print("The number was higher...womp womp")
+    guess = eval(input("Guess the value of the number in my head: "))
+  elif number_in_my_head < guess:
+    print("The number was lower...womp womp")
+    guess = eval(input("Guess the value of the number in my head: "))
 
 # CHALLENGE:
 #
@@ -14,3 +25,5 @@ print("The number is:", number_in_my_head)
 # the number was higher or lower.
 #
 # Bonus: If they don't guess the number, let them guess again.
+
+
